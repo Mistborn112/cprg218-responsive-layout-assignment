@@ -1,143 +1,159 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-container {
-    background-color: #120323;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .header-container img {
-    max-width: 100px;
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  #container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-  }
-  
-  main {
-    flex: 1;
-    max-width: 1000px;
-    text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
 }
-  
-  figure {
-    display: flex;
+
+.header-container {
+  background-color: #120323;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.header-container img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+  max-width: 1000px;
+  text-align: center;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  text-align: left;
+}
+
+figure img {
+  width: 100%;
+  max-width: 550px;
+  border: 5px solid #d9043d;
+}
+
+figcaption {
+  text-align: left; 
+}
+
+aside {
+  background-color: #97bf04;
+  max-width: 100%;
+}
+
+
+footer {
+  background-color: #d9043d;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  width: 100%;
+}
+
+/* Small Screens (Under 768px) */
+@media (max-width: 767px) {
+  .header-container {
     flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-    text-align: left;
-  }
-  
-  figure img {
-    width: 100%;
-    max-width: 550px;
-    border: 5px solid #d9043d;
-  }
-  
-  figcaption {
-    text-align: left; 
-  }
-  
-  aside {
-    background-color: #97bf04;
-    max-width: 100%;
   }
 
-  
-  footer {
-    background-color: #d9043d;
-    color: white;
-    text-align: center;
-    padding: 35px;
+  figure img {
     width: 100%;
   }
-    
-  /* Small Screens (Under 768px) */
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-    }
-  
-    figure img {
-      width: 100%;
-    }
+
+  aside {
+    width: 100%;
   }
-  
-  /* Medium Screens (768px - 999px) */
-  @media (min-width: 768px) and (max-width: 999px) {
-    .header-container {
-      flex-direction: row;
-      justify-content: center;
-    }
-  
-    #container {
-      flex-direction: column;
-    }
-  
-    figure {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-    }
-  
-    figure img {
-      max-width: 300px;
-      width: 100%;
-    }
-  
-    figcaption {
-      margin-left: 20px;
-      text-align: left;
-    }
-  
-    aside {
-      width: 100%;
-    }
+}
+
+/* Medium Screens (768px - 999px) */
+@media (min-width: 768px) and (max-width: 999px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: center;
   }
-  
-  /* Large Screens (1000px and up) */
-  @media (min-width: 1000px) {
-    #container {
-      flex-direction: row;
-    }
-  
-    main {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-    }
-  
-    figure {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-    }
-  
-    figure img {
-      max-width: 300px;
-    }
-  
-    figcaption {
-      margin-left: 20px;
-      text-align: left;
-    }
-  
-    aside {
-      width: 30%;
-    }
+
+  #container {
+    flex-direction: column;
   }
-  
+
+  figure {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  figure img {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  figcaption {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  aside {
+    width: 100%;
+  }
+}
+
+/* Large Screens (1000px and up) */
+@media (min-width: 1000px) {
+  #container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  figure img {
+    max-width: 300px;
+  }
+
+  figcaption {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  /* Sidebar aligned to the right */
+  aside {
+    width: 30%;
+    align-self: flex-start;
+  }
+
+  /* Footer at the bottom */
+  footer {
+    width: 100%;
+    margin-top: auto;
+  }
+}
