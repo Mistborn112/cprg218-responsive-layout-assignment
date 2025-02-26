@@ -12,7 +12,9 @@ body {
   color: white;
   display: flex;
   align-items: center;
-  padding: 10px;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
   text-align: center;
 }
 
@@ -28,6 +30,7 @@ body {
   width: 100%;
   max-width: 1200px;
   padding: 20px;
+  flex: 1;
 }
 
 main {
@@ -51,7 +54,8 @@ figure img {
 }
 
 figcaption {
-  text-align: left; 
+  text-align: left;
+  max-width: 600px;
 }
 
 aside {
@@ -59,16 +63,16 @@ aside {
   max-width: 100%;
 }
 
-
 footer {
   background-color: #d9043d;
   color: white;
   text-align: center;
   padding: 35px;
   width: 100%;
+  margin-top: auto;
 }
 
-/* Small Screens (Under 768px) */
+/* ===== Small Screens (Under 768px) ===== */
 @media (max-width: 767px) {
   .header-container {
     flex-direction: column;
@@ -83,7 +87,7 @@ footer {
   }
 }
 
-/* Medium Screens (768px - 999px) */
+/* ===== Medium Screens (768px - 999px) ===== */
 @media (min-width: 768px) and (max-width: 999px) {
   .header-container {
     flex-direction: row;
@@ -94,6 +98,7 @@ footer {
     flex-direction: column;
   }
 
+  /* Image & Caption Side by Side */
   figure {
     display: flex;
     flex-direction: row;
@@ -115,8 +120,13 @@ footer {
   }
 }
 
-/* Large Screens (1000px and up) */
+/* ===== Large Screens (1000px and up) ===== */
 @media (min-width: 1000px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   #container {
     display: flex;
     flex-direction: row;
